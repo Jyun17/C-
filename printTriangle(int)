@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+void printTriangle(int);
+
+int main()
+{
+    int num =0 ;
+
+    cout << "n = ";
+    cin >> num;
+    printTriangle(num);
+
+    return 0;
+}
+
+void printTriangle(int n )
+{
+    int i ,j;
+    for (i = 1; i <= n;i++ ) {
+        for (j = 1; j <= i; j++) {
+
+            cout << "*";
+
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
