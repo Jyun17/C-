@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int sum (int,int);
+
+int main()
+{
+    int tot;
+    tot = sum(1, 100);
+    cout << "1加到100總合為" << setw(5) << tot << endl;
+    
+    tot = sum(2, 100);
+    cout << "2加到100總合為" << setw(5) << tot << endl;
+
+    tot = sum(1, 99);
+    cout << "1加到99總合為" << setw(5) << tot << endl;
+
+    tot = sum(2, 101);
+    cout << "1加到101總合為" << setw(5) << tot << endl;
+
+    return 0;
+}
+int sum(int from,int to)
+{
+    int i, total = 0;
+    for (i = from;i <= to; i++) {
+        total += i;
+    }
+        return total;
