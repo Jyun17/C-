@@ -1,0 +1,26 @@
+
+#include <iostream>
+using namespace std;
+void printStar();
+
+int main()
+{
+    printStar();
+
+    std::cout << "Hello World!\n";
+
+    printStar();
+
+    return 0;
+}
+
+void printStar()
+{
+    int i = 1;
+    while (i <= 15) {
+        cout << "*";
+        i = i + 1;
+
+    }
+    cout << endl;
+}
