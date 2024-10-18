@@ -1,0 +1,37 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+void printStar(void);
+void nn(void);
+
+int main()
+{
+    printStar();
+
+   nn();
+
+    printStar();
+
+    return 0;
+}
+
+void printStar()
+{
+    int n;
+    for (n = 1;n <= 88;n++) {
+        cout << "*";
+       
+     }
+    cout << endl;
+}
+void nn()
+{
+   int i, j;
+   for (i = 1;i <= 9; i++) {
+    for (j = 1;j <= 9;j++) {
+        cout << j << "*" << i << "=" << setw(2) << i * j << "   ";
+    }
+    cout << endl;
+ }
+
+}
