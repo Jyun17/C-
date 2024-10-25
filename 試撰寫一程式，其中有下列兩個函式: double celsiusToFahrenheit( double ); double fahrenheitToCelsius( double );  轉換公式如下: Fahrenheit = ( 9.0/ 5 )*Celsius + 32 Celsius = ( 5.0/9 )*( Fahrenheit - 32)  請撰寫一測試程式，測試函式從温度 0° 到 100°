@@ -1,0 +1,32 @@
+#include <iostream>
+#include <iomanip> 
+using namespace std;
+
+
+double celsiusToFahrenheit(double celsius) {
+    return (9.0 / 5) * celsius + 32;
+}
+
+
+double fahrenheitToCelsius(double fahrenheit) {
+    return (5.0 / 9) * (fahrenheit - 32);
+}
+
+int main() {
+    cout << std::fixed << std::setprecision(2); 
+
+   
+    cout << "Celsius\tFahrenheit\t|\tFahrenheit\tCelsius\n";
+    cout << "---------------------------------------------------\n";
+
+    
+    for (int celsius = 0; celsius <= 100; ++celsius) {
+        double fahrenheit = celsiusToFahrenheit(celsius);
+        double celsiusConvertedBack = fahrenheitToCelsius(fahrenheit);
+
+        cout << celsius << "\t" << fahrenheit << "\t\t|\t"
+            << fahrenheit << "\t\t" << celsiusConvertedBack << '\n';
+    }
+
+    return 0;
+}
