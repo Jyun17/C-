@@ -3,20 +3,21 @@
 using namespace std;
 
 
-double m(int i) {
-    double sum = 0.0;
-    for (int a = 1; a <= i; ++a) {
-        sum += static_cast<double>(a) / (a + 1);
+double sum(int i) {
+    if (i == 1.0) {
+        return 0.5000;
     }
-    return sum;
+    else {
+        i = (i / (i + 1.0)) + sum(i - 1.0);
+    }
 }
 
 int main() {
-    cout << std::fixed << std::setprecision(6); 
+    cout << fixed << setprecision(4);
 
-  
+
     for (int i = 1; i <= 20; ++i) {
-        cout << i << "\t" << m(i) << std::endl;
+        cout << i << "\t" << sum(i) << endl;
     }
 
     return 0;
