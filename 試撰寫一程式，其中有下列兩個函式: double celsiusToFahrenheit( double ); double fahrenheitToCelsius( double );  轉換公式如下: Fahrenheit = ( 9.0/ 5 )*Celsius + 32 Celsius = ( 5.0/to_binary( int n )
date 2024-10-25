@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+
+void to_binary(int n) {
+    if (n > 1) {
+        to_binary(n / 2);
+    }
+    cout << (n % 2);
+}
+
+int main() {
+    int n;
+    cout << "請輸入一整數: ";
+    cin >> n;
+
+    cout << "二進制: ";
+    if (n == 0) {
+        cout << "0";
+    }
+    else {
+        to_binary(n);
+    }
+    cout << endl;
+
+    return 0;
+}
