@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip> 
+using namespace std;
+
+
+double m(int i) {
+    double sum = 0.0;
+    for (int a = 1; a <= i; ++a) {
+        sum += static_cast<double>(a) / (a + 1);
+    }
+    return sum;
+}
+
+int main() {
+    cout << std::fixed << std::setprecision(6); 
+
+  
+    for (int i = 1; i <= 20; ++i) {
+        cout << i << "\t" << m(i) << std::endl;
+    }
+
+    return 0;
+}
